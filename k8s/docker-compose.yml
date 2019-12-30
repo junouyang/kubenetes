@@ -1,0 +1,9 @@
+web:
+    image: k8s-demo
+    ports:
+     - "13000:5000"
+    links:
+     - redis
+redis:
+    image: redis:latest
+    container_name: redis
